@@ -69,17 +69,7 @@ public:
 	IF(CPU* cpu) : stage(cpu) {}
 
 	void execute();
-
-	void tran(const stage &b) {
-		ins = b.ins;
-		lab = b.lab;
-		result = b.result;
-		rd = b.rd, rs = b.rs, sr = b.sr, im = b.im, vRd = b.vRd, vRs = b.vRs, vSr = b.vSr, vPc = b.vPc, dis = b.dis, flag = b.flag, a1 = b.a1, va1 = b.va1;
-		length = b.length;
-		nex = b.nex;
-		pos = b.pos;
-		Hi = b.Hi, Lo = b.Lo, op = b.op;
-	}
+	
 };
 
 class IDDP : public stage {
@@ -89,17 +79,7 @@ public:
 	IDDP(CPU* cpu) : stage(cpu) {}
 
 	void execute();
-
-	void tran(const stage &b) {
-		ins = b.ins;
-		lab = b.lab;
-		result = b.result;
-		rd = b.rd, rs = b.rs, sr = b.sr, im = b.im, vRd = b.vRd, vRs = b.vRs, vSr = b.vSr, vPc = b.vPc, dis = b.dis, flag = b.flag, a1 = b.a1, va1 = b.va1;
-		length = b.length;
-		nex = b.nex;
-		pos = b.pos;
-		Hi = b.Hi, Lo = b.Lo, op = b.op;
-	}
+	
 };
 
 class EX : public stage {
@@ -113,18 +93,7 @@ public:
 	EX(CPU* cpu) : stage(cpu) {}
 
 	void execute();
-
-	void tran(const stage &b) {
-		ins = b.ins;
-		lab = b.lab;
-		result = b.result;
-		rd = b.rd, rs = b.rs, sr = b.sr, im = b.im, vRd = b.vRd, vRs = b.vRs, vSr = b.vSr, vPc = b.vPc, dis = b.dis, flag = b.flag, a1 = b.a1, va1 = b.va1;
-		length = b.length;
-		nex = b.nex;
-		pos = b.pos;
-		Hi = b.Hi, Lo = b.Lo, op = b.op;
-	}
-
+	
 };
 
 class MA : public stage {
@@ -136,17 +105,6 @@ public:
 	MA(CPU* cpu) : stage(cpu) {}
 
 	void execute();
-
-	void tran(const stage &b) {
-		ins = b.ins;
-		lab = b.lab;
-		result = b.result;
-		rd = b.rd, rs = b.rs, sr = b.sr, im = b.im, vRd = b.vRd, vRs = b.vRs, vSr = b.vSr, vPc = b.vPc, dis = b.dis, flag = b.flag, a1 = b.a1, va1 = b.va1;
-		length = b.length;
-		nex = b.nex;
-		pos = b.pos;
-		Hi = b.Hi, Lo = b.Lo, op = b.op;
-	}
 };
 
 class WB : public stage {
@@ -156,18 +114,6 @@ public:
 	WB(CPU* cpu) : stage(cpu) {}
 
 	void execute();
-
-	void tran(const stage &b) {
-		ins = b.ins;
-		lab = b.lab;
-		result = b.result;
-		rd = b.rd, rs = b.rs, sr = b.sr, im = b.im, vRd = b.vRd, vRs = b.vRs, vSr = b.vSr, vPc = b.vPc, dis = b.dis, flag = b.flag, a1 = b.a1, va1 = b.va1;
-		length = b.length;
-		nex = b.nex;
-		pos = b.pos;
-		Hi = b.Hi, Lo = b.Lo, op = b.op;
-	}
-
 };
 
 class CPU {
