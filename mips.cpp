@@ -209,13 +209,7 @@ public:
 		for (int i = 4; i > -1; --i) pipeline[i]->execute();
 		//for (int i = 0; i <= 4; ++i) pipeline[i]->execute();
 	}
-
-	void debug(){
-		cout << "\n\n\n";
-		for (int i = 0; i <= 33; ++i) cout << i << "       " << reg->read(i) << "\n";
-		cout << "pc       " << reg->readPC() << "\n";
-		cout << "\n\n\n";
-	}
+	
 };
 
 
@@ -1310,7 +1304,7 @@ void WB::execute() {
 }
 
 
-int main(int argc, char* argv[]) {//
+int main(int argc, char* argv[]) {
 	A.work(memory, In, Da, argv[1]);
 	CPU c(pr, pm, pIn, pDa);
 	c.reg->writePC(A.start);
