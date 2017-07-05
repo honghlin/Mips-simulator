@@ -534,7 +534,7 @@ public:
 			while (str[pos] == '	' || str[pos] == ' ') ++pos;
 			if (pos > len) continue;
 			for (int i = 0; i < len; ++i) {
-				if (str[i] == ':' && str[i - 1] != '"' && (str[i - 1] != 'l' || str[i - 2] != 'a')) {
+				if (str[i] == ':' && str[i - 1] != '"' && (str[i - 1] != 'l' || str[i - 2] != 'a' || str[i - 3] != 't')) {
 					for (int j = pos; j < i; ++j) s0 += str[j];
 					break;
 				}
