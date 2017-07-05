@@ -3,7 +3,7 @@
 
 //#include "stdafx.h"
 #include "parser.h"
-#include "Register.h"
+#include "register.h"
 #include<iostream>
 #include<cstdio>
 #include<cstring>
