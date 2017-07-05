@@ -217,7 +217,6 @@ void IF::execute() {
 		return;
 	}
 	insPos = cpu->getPc();
-	//cout << insPos << "\n";
 	ins = cpu->Ins->at(insPos);
 	int p = insPos + 1;
 	while (p < In.size() && !cpu->Ins->at(p).type) ++p;
