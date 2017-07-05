@@ -1,7 +1,5 @@
 #include<iostream>
 
-using std::cout;
-
 const int pow8 = (1 << 8) - 1;
 
 class Memory {
