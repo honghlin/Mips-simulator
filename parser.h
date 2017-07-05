@@ -518,19 +518,8 @@ public:
 		string str;
 		ifstream infile;
 		infile.open(s, ios::in);
-		//infile.open("C:\\Users\\80780\\Desktop\\MipsTest\\testsuit-1\\bulgarian-5110379024-wuhang.s", ios::in);
-		//infile.open("C:\\Users\\80780\\Desktop\\in\\testsuit-1\\array_test2-mahaojun.s", ios::in);
-		//infile.open("C:\\Users\\80780\\Desktop\\MipsTest\\testsuit-1\\expr-5110309085-jintianxing.s", ios::in);
-		//infile.open("C:\\Users\\80780\\Desktop\\in\\testsuit-1\\array_test1-mahaojun.s", ios::in);
-		//infile.open("C:\\Users\\80780\\Desktop\\in\\testsuit-1\\test_loop.s", ios::in);
-		//infile.open("C:\\Users\\80780\\Desktop\\in\\testsuit-1\\test_hilo.s", ios::in);
-		//infile.open("C:\\Users\\80780\\Desktop\\in\\testsuit-1\\test_str.s", ios::in);
-		//infile.open("C:\\Users\\80780\\Desktop\\in\\testsuit-1\\horse2-5100309153-yanghuan.s", ios::in);
-		//infile.open("C:\\Users\\80780\\Desktop\\in\\testsuit-1\\builtin-5140519064-youyurong.s", ios::in);
 		int i = 0;
-		//cout << "ttttt" << "\n";
 		while (!infile.eof()) {
-			//cout << ++i << "\n"
 			string s0, s1, s2, s3;
 			s0 = s1 = s2 = s3 = "";
 			int pos = 0;
@@ -544,10 +533,9 @@ public:
 			if (!len) continue;
 			while (str[pos] == '	' || str[pos] == ' ') ++pos;
 			if (pos > len) continue;
-			for (int i = 0; i < len; ++i) {//(str[i - 1] != 'l' || str[i - 2] != 'a')
+			for (int i = 0; i < len; ++i) {
 				if (str[i] == ':' && str[i - 1] != '"' && (str[i - 1] != 'l' || str[i - 2] != 'a')) {
 					for (int j = pos; j < i; ++j) s0 += str[j];
-					//cout << s0 << "\n";
 					break;
 				}
 			}
@@ -573,7 +561,6 @@ public:
 			}
 			if (s0 == "") continue;
 			deal(In, Da, s0, s1, s2, s3);
-			//cout << s0 << "   " << s1 << "   " << s2 << "   " << s3 << "   " << "\n";
 		}
 		vector<int> Pos;
 		int l = Da.size();
@@ -637,8 +624,6 @@ public:
 		}
 
 		int len = In.size();
-		//string str = "main";
 		for (int i = 0; i < len; ++i) if (In[i].type == 0 && In[i].s[0] == 'm' && In[i].s[1] == 'a') start = i + 1;
-		//cout << "ttttt" << "\n";
 	}
 };
