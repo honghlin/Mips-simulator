@@ -1340,7 +1340,6 @@ void MA::execute() {
 	isBlocked = false;
 	isIdle = true;
 	cpu->wb.isIdle = false;
-	//ex.isBlocked = false;
 	insPos = cpu->iF.insPos;
 }
 
@@ -1361,7 +1360,6 @@ void WB::execute() {
 		else if (ma.vRs == 9) cpu->reg->write(2, ma.result);
 	}
 	isIdle = true;
-	//ma.isBlocked = false;
 	insPos = ma.insPos;
 }
 
