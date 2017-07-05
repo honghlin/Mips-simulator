@@ -83,7 +83,6 @@ public :
 		data[pos++] = t2;
 		data[pos++] = t3;
 		data[pos++] = t4;
-		//cout << t <<"   post   "<< "\n";
 		return t;
 	}
 
@@ -98,7 +97,6 @@ public :
 	int space(const int &n) {
 		int t = pos;
 		pos += n;
-		//cout << pos << "     pos     " << "\n";
 		return t;
 	}
 
