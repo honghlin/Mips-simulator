@@ -1,9 +1,5 @@
 #include<cstring>
 
-//typedef unsigned long long LL;
-
-//typedef unsigned int u32;
-
 class Register {
 
 private:
@@ -31,7 +27,6 @@ public:
 	}
 
 	void writePC(int v) {
-		//cout << v << "write   " <<"\n";
 		pc = v;
 	}
 
