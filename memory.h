@@ -22,42 +22,21 @@ public :
 
 public :
 
-	Memory() : pos(0) {
-		//for (int i = 0; i <= 8 * 1024 * 1024 - 1; ++i) data[i] = '\0';
-	}
+	Memory() : pos(0) {}
 
-	int load(const int &p, const int &op) {
-		//cout << "   loadp   " << p << "\n";
-		//if (op == 1) return p;
+	int load(const int &p, const int &op) {	
 		int a = (int)data[p];
-		//cout << a << "     ";
 		for (int i = 1; i < op; ++i) a = (a << 8) + (int)data[p + i];
-		//cout << data[p + i].n << "        ", 
-		//cout << "\n";
-		//cout << p << "      " << p + 1 << "      " << p + 2 << "       " << p + 3 << "       ";
-		//cout << "\n";
-		//cout << "   load   " << a << "\n"; 
 		return a;
 	}
 
 	void store(const int &p, const int &a, const int &op) {
-		//cout << "       store       "  <<  op << "          " << a << "\n";
-			
-		//cout << "   store   " << a << "\n";
-		if (op == 1) {
-			//cout << a << "aaa    \n";
-			data[p] = a;
-			//cout << (int)data[p] << "aaaaa    \n";
-			//cout << p << "   p   " << "\n";
-			//cout << data[p].n << "   p   " << "\n";
-			//if (pos < p + 1) pos = p + 1;
-		}
+		if (op == 1) data[p] = a;
 		else if (op == 2) {
 			int t1 = a & pow8;
 			int t2 = a >> 8;
 			data[p] = t2;
 			data[p + 1] = t1;
-			//if (pos < p + 2) pos = p + 2;
 		}
 		else {
 			int t1 = a & pow8;
@@ -68,9 +47,7 @@ public :
 			data[p + 1] = t3;
 			data[p + 2] = t2;
 			data[p + 3] = t1;
-			//if(pos < p + 4) pos = p + 4;
-			//cout << t4 << "   " << t3 << "     " << t2 << "     " << t1 << "\n";
-			//cout << p << "        " << p + 1 << "       " << p + 2 << "         " << p + 3 << "\n";
+
 		}
 		return;
 	}
