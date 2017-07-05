@@ -5,16 +5,7 @@ using std::cout;
 const int pow8 = (1 << 8) - 1;
 
 class Memory {
-
-	struct byte {
-
-		int n;
-		char c;
-
-		byte() : n(0), c(0) {}
-
-	};
-
+	
 public :
 
 	int pos;
@@ -99,10 +90,5 @@ public :
 		pos += n;
 		return t;
 	}
-
-	void debug() {
-		cout << "pos  " << pos << "\n";
-		for (int i = 0; i < pos; ++i) cout << i << "   " << (int)data[i]  << "\n";
-	}
-
+	
 };
